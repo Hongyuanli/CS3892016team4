@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".informationactivities.PreventionActivity"
+    tools:showIn="@layout/activity_prevention">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Lorem Ipsum"
+                    android:id="@+id/textView"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mattis ante ac urna aliquet, nec mollis purus laoreet. Aliquam erat volutpat. Quisque eu sapien rutrum, mattis orci id, lacinia erat. Nulla at quam est. Suspendisse id suscipit lorem. In facilisis lectus neque, vitae consequat enim facilisis eget. Duis suscipit, justo lacinia placerat scelerisque, felis urna vestibulum velit, vitae feugiat lacus nunc eget ex. Donec luctus eleifend mauris ac placerat. Pellentesque sagittis ac mauris in tempus. Vestibulum scelerisque arcu eu pellentesque dictum.  Nam elit odio, bibendum a tincidunt in, pellentesque ut felis. Vestibulum nisi enim, blandit tempus ornare id, facilisis egestas justo. Nunc malesuada tincidunt mi nec varius. Morbi posuere suscipit nisl, id euismod risus bibendum ac. Etiam maximus dui risus, ultricies molestie ligula cursus et. Vivamus sit amet interdum magna, non sagittis tellus. In hac habitasse platea dictumst. Aliquam justo lectus, tempor sit amet ipsum nec, iaculis luctus sapien. Nulla porttitor felis quam, vel tempor dui venenatis sed. Proin ultricies, orci et vestibulum tempor, dui leo vulputate lorem, eget dignissim velit enim ut urna. Pellentesque feugiat, ipsum in feugiat tincidunt, felis ipsum iaculis augue, in mollis ipsum leo eget libero. Ut semper laoreet nisl eu euismod. Sed egestas fermentum erat, in aliquam mi rutrum ac.  Duis dignissim maximus gravida. Ut mauris arcu, malesuada vel dapibus a, sodales efficitur neque. Vivamus in viverra nunc, vel eleifend massa. Nam in metus consectetur lacus convallis ornare. Aliquam nec sapien eget sapien posuere dapibus. Ut bibendum enim eget lectus dapibus, non pellentesque eros fermentum. Suspendisse fringilla quam eget lobortis blandit. Donec vitae pharetra libero, nec venenatis nibh. Proin vulputate velit id odio blandit pharetra. Etiam non massa consectetur, interdum tortor quis, laoreet nunc. Donec nec ipsum at mauris tincidunt placerat in ut metus. Phasellus a dui ac enim porttitor imperdiet quis quis ligula. Maecenas vitae neque tincidunt, placerat nibh non, ultricies neque. Etiam tincidunt diam nunc, nec placerat turpis ullamcorper malesuada. Duis ultrices enim ac purus malesuada, id accumsan dolor blandit. Fusce sit amet tellus non eros hendrerit bibendum vitae eu quam.  Ut dapibus, nunc vitae accumsan placerat, eros diam ultrices massa, eu rutrum magna ligula at mi. Aliquam malesuada, nulla in mattis placerat, felis dolor accumsan nisl, ac laoreet nulla nulla vitae lorem. Aliquam imperdiet, justo eu pharetra pellentesque, est lorem malesuada augue, eu ullamcorper nisi libero a mauris. Aliquam tristique est vel nisl egestas ullamcorper. Duis euismod volutpat sem nec pellentesque. Donec sollicitudin egestas pellentesque. Nunc venenatis vel est vitae volutpat."
+                    android:id="@+id/textView2"
+                    android:layout_below="@+id/textView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="63dp" />
+
+            </RelativeLayout>
+        </ScrollView>
+</RelativeLayout>

@@ -1,8 +1,6 @@
 package org.zikalert;
 
 import android.support.design.widget.TabLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -11,15 +9,14 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
-import android.widget.TextView;
+import org.zikalert.fragments.NewsFragment;
+import org.zikalert.fragments.ChecklistFragment;
+import org.zikalert.fragments.InformationFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -81,80 +78,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Fragment for Informations section.
-     */
-    public static class InformationsFragment extends Fragment {
-
-        public InformationsFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment.
-         */
-        public static InformationsFragment newInstance() {
-            InformationsFragment fragment = new InformationsFragment();
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_informations, container, false);
-            return rootView;
-        }
-    }
-
-    /**
-     * Fragment for News section.
-     */
-    public static class NewsFragment extends Fragment {
-
-        public NewsFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment.
-         */
-        public static NewsFragment newInstance() {
-            NewsFragment fragment = new NewsFragment();
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_news, container, false);
-            return rootView;
-        }
-    }
-
-
-    /**
-     * Fragment for Checklist section.
-     */
-    public static class ChecklistFragment extends Fragment {
-
-        public ChecklistFragment() {
-        }
-
-        /**
-         * Returns a new instance of this fragment.
-         */
-        public static ChecklistFragment newInstance() {
-            ChecklistFragment fragment = new ChecklistFragment();
-            return fragment;
-        }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_checklist, container, false);
-            return rootView;
-        }
-    }
-
-
-    /**
      * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
@@ -169,11 +92,11 @@ public class MainActivity extends AppCompatActivity {
             // getItem is called to instantiate the fragment for the given page.
             switch (position){
                 case 0:
-                    return InformationsFragment.newInstance();
+                    return new InformationFragment();
                 case 1:
-                    return NewsFragment.newInstance();
+                    return new NewsFragment();
                 case 2:
-                    return ChecklistFragment.newInstance();
+                    return new ChecklistFragment();
             }
             return null;
         }
