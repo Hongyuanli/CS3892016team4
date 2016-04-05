@@ -1,6 +1,11 @@
 package org.zikalert;
 
+import android.app.AlarmManager;
+import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -69,14 +74,36 @@ public class MainActivity extends AppCompatActivity{
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-      //  if (id == R.id.action_settings) {
+        if (id == R.id.action_settings) {
             //Open the Settings page
-     //       startActivity(new Intent(this, SettingsActivity.class));
-       //     return true;
-       // }
+            startActivity(new Intent(this, SettingsActivity.class));
+            return true;
+        }else if(id == R.id.action_notification){
+            scheduleNotification(getNotification("You have things to do to prevent Zika Virus!"), 5000);
+            return true;
+        }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void scheduleNotification(Notification notification, int delay) {
+
+        Intent notificationIntent = new Intent(this, NotificationPublisher.class);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
+        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, notification);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        long futureInMillis = SystemClock.elapsedRealtime() + delay;
+        AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);
+    }
+
+    private Notification getNotification(String content) {
+        Notification.Builder builder = new Notification.Builder(this);
+        builder.setContentTitle("ZikAlert");
+        builder.setContentText(content);
+        builder.setSmallIcon(R.drawable.ic_notification);
+        return builder.build();
     }
 
     /**
