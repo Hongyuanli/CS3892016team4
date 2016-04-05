@@ -4,6 +4,11 @@
     <string name="action_about">About</string>
     <string name="section_format">Hello World from section: %1$d</string>
     <string name="title_activity_prevention">PreventionActivity</string>
+    <string name="title_activity_aboutzika">PreventionActivity</string>
+    <string name="title_activity_area">PreventionActivity</string>
+    <string name="title_activity_symptoms">PreventionActivity</string>
+    <string name="title_activity_transmission">PreventionActivity</string>
+    <string name="title_activity_pregnant">PreventionActivity</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->

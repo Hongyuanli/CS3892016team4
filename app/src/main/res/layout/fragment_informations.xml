@@ -7,8 +7,168 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity$PlaceholderFragment"
-    android:background="#f2f2f2">
+    android:background="#f2f2f2"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    >
 
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/radioButton"
+        android:layout_centerHorizontal="true"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true">
+
+
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:text="About Zika virus"
+            android:autoText="false"
+            android:editable="false"
+            android:background="#ffffff" />
+
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/one" />
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view2"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/card_view"
+        android:layout_centerHorizontal="true"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/info_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="Areas with Zika virus"
+            android:autoText="false"
+            android:editable="false"
+            android:background="#ffffff" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view3"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/card_view2"
+        android:layout_centerHorizontal="true"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/info_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="Symptoms, Diagnosis and Treatment"
+            android:autoText="false"
+            android:editable="false"
+            android:background="#ffffff" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view4"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/card_view3"
+        android:layout_centerHorizontal="true"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/info_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="Prevention"
+            android:autoText="false"
+            android:editable="false"
+            android:background="#ffffff" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view5"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/card_view4"
+        android:layout_centerHorizontal="true"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/info_text5"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="Transmission"
+            android:autoText="false"
+            android:editable="false"
+            android:background="#ffffff" />
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view6"
+        android:layout_gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp"
+        android:layout_below="@+id/card_view5"
+        android:layout_centerHorizontal="true"
+        card_view:cardPreventCornerOverlap="true"
+        card_view:cardUseCompatPadding="true">
+
+        <TextView
+            android:id="@+id/info_text6"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:text="Pregnant Woman"
+            android:autoText="false"
+            android:editable="false"
+            android:background="#ffffff" />
+
+
+    </android.support.v7.widget.CardView>
 
     <RadioButton
         android:layout_width="wrap_content"
@@ -18,21 +178,21 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Open Activity"
-        android:id="@+id/btnOpenActivity"
-        android:layout_marginTop="54dp"
-        android:layout_below="@+id/radioButton"
-        android:layout_centerHorizontal="true" />
+    <!--<Button-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Open Activity"-->
+        <!--android:id="@+id/btnOpenActivity"-->
+        <!--android:layout_marginTop="54dp"-->
+        <!--android:layout_below="@+id/radioButton"-->
+        <!--android:layout_centerHorizontal="true" />-->
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/abc_scrubber_control_to_pressed_mtrl_005" />
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:src="@drawable/abc_scrubber_control_to_pressed_mtrl_005" />-->
 </RelativeLayout>
 

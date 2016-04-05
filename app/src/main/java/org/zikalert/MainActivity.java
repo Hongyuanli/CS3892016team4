@@ -70,11 +70,11 @@ public class MainActivity extends AppCompatActivity{
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+      //  if (id == R.id.action_settings) {
             //Open the Settings page
-            startActivity(new Intent(this, SettingsActivity.class));
-            return true;
-        }
+     //       startActivity(new Intent(this, SettingsActivity.class));
+       //     return true;
+       // }
 
         return super.onOptionsItemSelected(item);
     }

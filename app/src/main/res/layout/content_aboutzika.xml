@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".informationactivities.AboutActivity"
+    tools:showIn="@layout/activity_aboutzika">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="About Zika virus"
+                android:id="@+id/textView"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Zika virus is a flavivirus, closely related to dengue. Cases of Zika virus have previously been reported in Africa, southern Asia and the Pacific Islands. Since May 2015, Brazil has experienced a significant outbreak of Zika virus. In recent months, Brazilian officials reported an increase in the number of babies born with microcephaly. Researchers are working to study the link between Zika during pregnancy and microcephaly. Although there is increasing evidence of the link between Zika and microcephaly, we do not know if these babies’ microcephaly is a result of their mother’s Zika virus infection during pregnancy."
+                android:id="@+id/textView2"
+                android:layout_below="@+id/textView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="63dp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
