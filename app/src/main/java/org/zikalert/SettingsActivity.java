@@ -18,6 +18,8 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
         Log.d(TAG, "onCreate");
         getFragmentManager().beginTransaction()
                 .replace(android.R.id.content, new SettingsFragment()).commit();
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public static class SettingsFragment extends PreferenceFragment {

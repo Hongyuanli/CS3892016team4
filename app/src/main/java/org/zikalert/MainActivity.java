@@ -81,6 +81,9 @@ public class MainActivity extends AppCompatActivity{
         }else if(id == R.id.action_notification){
             scheduleNotification(getNotification("You have things to do to prevent Zika Virus!"), 5000);
             return true;
+        }else if(id == R.id.action_about){
+            startActivity(new Intent(this, AboutDevs.class));
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
