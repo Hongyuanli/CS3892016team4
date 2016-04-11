@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="5dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        card_view:cardElevation="0.01dp"
+        android:layout_marginBottom="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:id="@+id/news_thumbnail"
+                android:src="@drawable/aboutzika"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget placerat leo. Donec id lorem convallis, mattis mi nec, hendrerit nulla. Morbi tincidunt felis quis tempus vestibulum. Morbi ultrices feugiat venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisl orci, placerat vitae ipsum sed, ultrices semper diam. Curabitur tincidunt sodales tortor, placerat porttitor nisi laoreet vitae. Proin quis libero sapien. Integer luctus interdum purus, id luctus elit ultricies quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+                android:id="@+id/news_title"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/news_thumbnail"
+                android:layout_toEndOf="@+id/news_thumbnail"
+                android:layout_alignBottom="@+id/news_thumbnail" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc eget placerat leo. Donec id lorem convallis, mattis mi nec, hendrerit nulla. Morbi tincidunt felis quis tempus vestibulum. Morbi ultrices feugiat venenatis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nisl orci, placerat vitae ipsum sed, ultrices semper diam. Curabitur tincidunt sodales tortor, placerat porttitor nisi laoreet vitae. Proin quis libero sapien. Integer luctus interdum purus, id luctus elit ultricies quis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+                android:id="@+id/news_text"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/bottom_border"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="2dp"
+                android:layout_above="@+id/news_timestamp"
+                android:layout_below="@+id/news_thumbnail" />
+
+            <ImageView
+                android:src="@drawable/ic_menu_share_holo_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/news_share"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:layout_margin="5dp"
+                android:text="timestamp"
+                android:id="@+id/news_timestamp"
+                android:layout_alignBottom="@+id/news_share"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
