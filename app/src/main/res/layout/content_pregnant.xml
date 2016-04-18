@@ -34,7 +34,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Zika and microcephaly"
+                android:text="Pregnant women can be infected with Zika virus.
+            \n\n  - The primary way that pregnant women get Zika virus is through the bite of an infected mosquito.
+            \n\n  - Zika virus can be spread by a man to his sex partners.
+            \n\n\nA pregnant woman can pass Zika virus to her fetus.
+            \n\n  - Zika virus can be passed from a pregnant woman to her fetus during pregnancy or at delivery.
+            \n\n\nZika and microcephaly
+            \n\n  - Since May 2015, Brazil has experienced a significant outbreak of Zika virus. In recent months, Brazilian officials reported an increase in the number of babies born with microcephaly.
+            \n\n  - Recent study results showing the presence of Zika virus in the brains of babies born with microcephaly."
                 android:id="@+id/textView2"
                 android:layout_below="@+id/textView"
                 android:layout_alignParentLeft="true"

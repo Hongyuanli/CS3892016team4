@@ -30,11 +30,29 @@
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true" />
 
+            <!--Do not change the formating of the code below-->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="Common Symptoms:  Diagnosis:  Treatment of the symptoms:"
+
+                android:text="Common Symptoms \n  - Fever \n  - Rash \n  - Joint pain \n  - Conjunctivitis \n  - Headache \n  - Muscle pain \n  - Eye pain
+\n\n\nDiagnosis \n  - The symptoms of Zika are similar to those of dengue and chikungunya, diseases spread through the same mosquitoes that transmit Zika.
+\n\n  - See your healthcare provider if you develop the symptoms described above and have visited an area where Zika is found.
+\n\n  - If you have recently traveled, tell your healthcare provider when and where you traveled.
+\n\n  - Your healthcare provider may order blood tests to look for Zika or other similar viruses like dengue or chikungunya.
+\n\n  -Zika virus disease diagnostics is primarily based on detection of viral RNA from clinical specimens in acutely ill patients.
+\n\n\nTreatment \nCurrently there are no vaccine for Zika Virus.
+
+\n\nWhat you can do is:
+\n\n  - Get plenty of rest.
+\n\n  - Drink fluids to prevent dehydration.
+\n\n  - Take medicine such as acetaminophen (Tylenol®) or paracetamol to reduce fever and pain.
+\n\n  - Do not take aspirin and other non-steroidal anti-inflammatory drugs (NSAIDS) until dengue can be ruled out to reduce the risk of bleeding.
+\n\n  - If you are taking medicine for another medical condition, talk to your healthcare provider before taking additional medication.
+\n\nIf you are diagnosed to have Zika, prevent mosquito bites for the first week of your illness. During the first week of infection, Zika virus can be found in the blood and passed from an infected person to a mosquito through mosquito bites. Furthermore, an infected mosquito can then spread the virus to other people.
+"
+
                 android:id="@+id/textView2"
                 android:layout_below="@+id/textView"
                 android:layout_alignParentLeft="true"
