@@ -93,7 +93,7 @@ public class NewsFragment extends Fragment {
         protected void onPostExecute(WebhoseResponse webhoseResponse) {
             if(webhoseResponse != null){
                 //TODO: see if this still works when reloaded
-                mAdapter = new NewsAdapter(webhoseResponse.posts);
+                mAdapter = new NewsAdapter(webhoseResponse.posts,getActivity());
                 mRecyclerView.setAdapter(mAdapter);
 
 //                WebhosePost p = webhoseResponse.posts.get(0);

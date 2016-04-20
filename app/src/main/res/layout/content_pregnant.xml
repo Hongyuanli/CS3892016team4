@@ -24,15 +24,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Pregnant woman"
-                android:id="@+id/textView"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Pregnant women can be infected with Zika virus.
             \n\n  - The primary way that pregnant women get Zika virus is through the bite of an infected mosquito.
@@ -43,10 +34,9 @@
             \n\n  - Since May 2015, Brazil has experienced a significant outbreak of Zika virus. In recent months, Brazilian officials reported an increase in the number of babies born with microcephaly.
             \n\n  - Recent study results showing the presence of Zika virus in the brains of babies born with microcephaly."
                 android:id="@+id/textView2"
-                android:layout_below="@+id/textView"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="63dp" />
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
     </ScrollView>

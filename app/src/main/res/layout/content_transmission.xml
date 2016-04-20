@@ -24,26 +24,12 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Transmission"
-                android:id="@+id/textView"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- Zika virus is transmitted by mosquitoes. It has been isolated from Aedes aegypti mosquitoes and experimental infections show that this species is capable of transmitting Zika virus.
-\n\n- Other Aedes mosquito species (notably Ae. africanus, Ae. albopictus, Ae. polynesiensis, Ae. unilineatus, Ae. vittatus and Ae. hensilli) are considered as potential vectors of Zika virus. These species bite during the day.
-\n\n- Additional modes of transmission have been identified. Perinatal transmission can occur most probably by trans-placental transmission or during delivery when the mother is infected.
-\n\n- There is a potential risk of Zika virus transmission from a blood transfusion.
-\n\n- Zika virus can be spread by a man to his sex partners. Woman cannot transmit Zika to man."
+                android:text="- Zika virus is transmitted by mosquitoes. It has been isolated from Aedes aegypti mosquitoes and experimental infections show that this species is capable of transmitting Zika virus. \n\n- Other Aedes mosquito species (notably Ae. africanus, Ae. albopictus, Ae. polynesiensis, Ae. unilineatus, Ae. vittatus and Ae. hensilli) are considered as potential vectors of Zika virus. These species bite during the day. \n\n- Additional modes of transmission have been identified. Perinatal transmission can occur most probably by trans-placental transmission or during delivery when the mother is infected. \n\n- There is a potential risk of Zika virus transmission from a blood transfusion. \n\n- Zika virus can be spread by a man to his sex partners. Woman cannot transmit Zika to man."
                 android:id="@+id/textView2"
-                android:layout_below="@+id/textView"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_marginTop="63dp" />
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
     </ScrollView>

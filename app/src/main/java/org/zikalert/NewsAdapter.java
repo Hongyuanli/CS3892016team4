@@ -1,6 +1,10 @@
 package org.zikalert;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,12 +22,14 @@ import java.util.List;
  */
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
 
+    Activity mActivity;
     List<WebhosePost> mPosts;
     Context mContext;
 
-    public NewsAdapter(List<WebhosePost> posts){
+    public NewsAdapter(List<WebhosePost> posts, Activity activity){
         super();
         mPosts = posts;
+        mActivity = activity;
     }
 
     @Override
@@ -36,7 +42,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(NewsAdapter.ViewHolder holder, int position) {
-        WebhosePost webhosePost = mPosts.get(position);
+        final WebhosePost webhosePost = mPosts.get(position);
 
         holder.newsTitle.setText(webhosePost.title);
         holder.newsText.setText(webhosePost.text);
@@ -44,6 +50,29 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
 
         //get image with Picasso and mContent
         holder.imgThumbnail.setImageResource(R.drawable.aboutzika);
+
+        holder.newsTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(webhosePost.url));
+                mActivity.startActivity(browserIntent);
+            }
+        });
+
+        holder.newsShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, webhosePost.title + ": "+ webhosePost.url);
+                sendIntent.setType("text/plain");
+                mActivity.startActivity(sendIntent);
+            }
+        });
+
+
+
+
     }
 
     @Override
@@ -57,6 +86,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
         public TextView newsTitle;
         public TextView newsText;
         public TextView newsTimestamp;
+        public ImageView newsShare;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -64,6 +94,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
             newsTitle = (TextView)itemView.findViewById(R.id.news_title);
             newsText = (TextView)itemView.findViewById(R.id.news_text);
             newsTimestamp = (TextView)itemView.findViewById(R.id.news_timestamp);
+            newsShare = (ImageView) itemView.findViewById(R.id.news_share);
         }
     }
 }
