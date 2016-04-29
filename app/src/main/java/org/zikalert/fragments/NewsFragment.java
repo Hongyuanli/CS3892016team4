@@ -4,6 +4,7 @@ package org.zikalert.fragments;
  * Created by Luiz Fernando on 3/18/2016.
  */
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -65,8 +66,15 @@ public class NewsFragment extends Fragment {
     }
 
     class GetNews extends AsyncTask<Void,Void,WebhoseResponse>{
+
+        ProgressDialog progress = new ProgressDialog(getContext());
+
         @Override
         protected WebhoseResponse doInBackground(Void... params) {
+
+            progress.setTitle("Loading");
+            progress.setMessage("Wait while loading...");
+
             WebhoseResponse r = null;
 
             try {
@@ -90,10 +98,18 @@ public class NewsFragment extends Fragment {
         }
 
         @Override
+        protected void onProgressUpdate(Void... values) {
+            progress.show();
+        }
+
+        @Override
         protected void onPostExecute(WebhoseResponse webhoseResponse) {
+            // To dismiss the dialog
+            progress.dismiss();
+
             if(webhoseResponse != null){
                 //TODO: see if this still works when reloaded
-                mAdapter = new NewsAdapter(webhoseResponse.posts,getActivity());
+                mAdapter = new NewsAdapter(webhoseResponse.posts,getActivity(),getContext());
                 mRecyclerView.setAdapter(mAdapter);
 
 //                WebhosePost p = webhoseResponse.posts.get(0);

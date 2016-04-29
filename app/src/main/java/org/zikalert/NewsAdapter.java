@@ -16,6 +16,7 @@ import com.buzzilla.webhose.client.WebhosePost;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
+import java.util.regex.Pattern;
 
 /**
  * Created by Luiz Fernando on 4/10/2016.
@@ -26,10 +27,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
     List<WebhosePost> mPosts;
     Context mContext;
 
-    public NewsAdapter(List<WebhosePost> posts, Activity activity){
+    public NewsAdapter(List<WebhosePost> posts, Activity activity, Context context){
         super();
         mPosts = posts;
         mActivity = activity;
+        mContext = context;
     }
 
     @Override
@@ -46,10 +48,17 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
 
         holder.newsTitle.setText(webhosePost.title);
         holder.newsText.setText(webhosePost.text);
-        holder.newsTimestamp.setText(webhosePost.published);
+        holder.newsTimestamp.setText(formatTimestamp(webhosePost.published));
 
         //get image with Picasso and mContent
         holder.imgThumbnail.setImageResource(R.drawable.aboutzika);
+
+        if(!webhosePost.thread.mainImage.isEmpty()){
+            Picasso.with(mContext).load(webhosePost.thread.mainImage).into(holder.imgThumbnail);
+        }
+        if(!webhosePost.externalLinks.isEmpty()){
+            Picasso.with(mContext).load(webhosePost.externalLinks.get(0)).into(holder.imgThumbnail);
+        }
 
         holder.newsTitle.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,5 +105,20 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
             newsTimestamp = (TextView)itemView.findViewById(R.id.news_timestamp);
             newsShare = (ImageView) itemView.findViewById(R.id.news_share);
         }
+    }
+
+    private String formatTimestamp(String time){
+        //create a regex to split the timestamp
+        // \p is for POSIX character classes
+        // {Punct} is for punctuations, e.g. slash, double-points
+        // {L} is for letters
+        // {Sm} is for Math symbols
+        // more info: http://docs.oracle.com/javase/8/docs/api/java/util/regex/Pattern.html
+        String[] split = time.split("\\p{Punct}|\\p{L}|\\p{Sm}");
+
+        //sum hour with time zone
+        int hour = Integer.parseInt(split[3]) + Integer.parseInt(split[7]);
+        // MM/DD/YYYY HH:MM
+        return split[1]+"/"+split[2]+"/"+split[0]+" "+Integer.toString(hour)+":"+split[4];
     }
 }
