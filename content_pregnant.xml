@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".informationactivities.PregnantActivity"
+    tools:showIn="@layout/activity_pregnant">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Pregnant women are among the most endangered individuals by the symptoms of the Zika virus.
+            \n\n  - The primary way that pregnant women get Zika virus is through the bite of an infected mosquito
+            \n\n  - Less common but still relevant is the risk of contracting the virus through sexual intercourse
+            \n\n  - A major concern regarding the infection of pregnant women is how easily the Zika virus can spread to her fetus
+            \n\n  - Zika virus can be passed from a pregnant woman to her fetus during pregnancy and even at delivery
+            \n\n\nZika and microcephaly
+            \n\n  - Since May 2015, Brazil has experienced a significant outbreak of the Zika virus; in recent months, Brazilian officials reported a concurrent increase in the number of babies born with microcephaly
+            \n\n  - Recent studies show a direct correlation between the Zika virus and babies born with microcephaly"
+                android:id="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

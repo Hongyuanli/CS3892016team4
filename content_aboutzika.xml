@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".informationactivities.AboutActivity"
+    tools:showIn="@layout/activity_aboutzika">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Zika virus is a flavivirus, closely related to both dengue (breakbone fever) and the West Nile virus. Not altogether new, cases of Zika virus have previously been reported in Africa, southern Asian countries, and the Pacific Islands. Since May 2015, Brazil has experienced a significant outbreak of the Zika virus; Brazilian officials have also reported an increase in the number of Brazilian babies born with microcephaly, suggesting a link between the virus and the condition.\n\nResearchers have been working to study the apparent the link between Zika during pregnancy and microcephaly. Although there is increasing evidence of the link between Zika and microcephaly, we do not know for certain if these babies’ microcephaly is a result of their mother’s contraction of the Zika virus during pregnancy."
+                android:id="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
