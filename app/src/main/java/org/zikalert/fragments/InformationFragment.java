@@ -1,8 +1,5 @@
 package org.zikalert.fragments;
 
-/**
- * Created by Luiz Fernando on 3/18/2016.
- */
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +15,7 @@ import org.zikalert.informationactivities.AreaActivity;
 import org.zikalert.informationactivities.PregnantActivity;
 import org.zikalert.informationactivities.PreventionActivity;
 import org.zikalert.R;
+import org.zikalert.informationactivities.QuizActivity;
 import org.zikalert.informationactivities.SymptomsActivity;
 import org.zikalert.informationactivities.TransmissionActivity;
 
@@ -97,7 +95,13 @@ public class InformationFragment extends Fragment {
             }
         });
 
-
+        CardView card_view7 = (CardView) getView().findViewById(R.id.card_view7);
+        card_view7.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), QuizActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
