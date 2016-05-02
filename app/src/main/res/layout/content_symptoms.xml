@@ -44,7 +44,7 @@
 \n\nIf you are diagnosed to have Zika, prevent mosquito bites for the first week of your illness. During the first week of infection, Zika virus can be found in the blood and passed from an infected person to a mosquito through mosquito bites. Furthermore, an infected mosquito can then spread the virus to other people.
 "
 
-                android:id="@+id/textView2"
+                android:id="@+id/textView1"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />

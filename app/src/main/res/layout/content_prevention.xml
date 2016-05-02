@@ -29,7 +29,7 @@
                  \n\nClothing \n  - Wear long-sleeved shirts and long pants. \n  - Treat clothing and gear with permethrin or purchase permethrin-treated items. (Treated clothing remains protective after multiple washings, and Do NOT use permethrin products directly on skin.)
                  \n\nIndoor Protection \n  - Stay in places with air conditioning or that use window and door screens to keep mosquitoes outside. \n -	 Sleep under a mosquito bed net if air conditioned or screened rooms are not available or if sleeping outdoors.
                  \n\nRepellent \n  - Use Environmental Protection Agency (EPA)-registered insect repellents. When used as directed, these insect repellents are safe and effective for pregnant and breastfeeding women. \n  - Always follow the product label instructions. \n  - Reapply as directed. \n  - Do not spray repellent on the skin under clothing. \n  - If you are also using sunscreen, apply sunscreen before applying insect repellent. \n  - Use a repellent with one of the following active ingredients: DEET, picaridin, IR3535, and oil of lemon eucalyptus or para-menthan-diol."
-                    android:id="@+id/textView2"
+                    android:id="@+id/textView1"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true" />
