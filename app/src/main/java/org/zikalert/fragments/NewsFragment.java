@@ -7,6 +7,7 @@ package org.zikalert.fragments;
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -15,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.buzzilla.webhose.client.WebhoseClient;
@@ -33,11 +35,16 @@ import java.io.IOException;
  */
 public class NewsFragment extends Fragment {
 
+//    ProgressDialog progress;
+
     private final String webhoseToken = "fefad8c8-e6e8-43f8-986e-c8b26946feee";
 
     RecyclerView mRecyclerView;
     RecyclerView.LayoutManager mLayoutManager;
     NewsAdapter mAdapter;
+
+    private ProgressBar spinner;
+    private FloatingActionButton loading;
 
     public NewsFragment() { //Default blank constructor required.
     }
@@ -60,21 +67,24 @@ public class NewsFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getView().getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-
         new GetNews().execute();
+
+        loading = (FloatingActionButton) getView().findViewById(R.id.btn_loading);
+        loading.setVisibility(View.VISIBLE);
+
+//        spinner = (ProgressBar) getView().findViewById(R.id.progressBar);
+//        spinner.setVisibility(View.VISIBLE);
+
+
+//        progress = ProgressDialog.show(getContext(), "dialog title",
+//                "dialog message", true);
 
     }
 
     class GetNews extends AsyncTask<Void,Void,WebhoseResponse>{
 
-        ProgressDialog progress = new ProgressDialog(getContext());
-
         @Override
         protected WebhoseResponse doInBackground(Void... params) {
-
-            progress.setTitle("Loading");
-            progress.setMessage("Wait while loading...");
-
             WebhoseResponse r = null;
 
             try {
@@ -99,13 +109,14 @@ public class NewsFragment extends Fragment {
 
         @Override
         protected void onProgressUpdate(Void... values) {
-            progress.show();
         }
 
         @Override
         protected void onPostExecute(WebhoseResponse webhoseResponse) {
             // To dismiss the dialog
-            progress.dismiss();
+            loading.setVisibility(View.INVISIBLE);
+            //spinner.setVisibility(View.INVISIBLE);
+//            progress.dismiss();
 
             if(webhoseResponse != null){
                 //TODO: see if this still works when reloaded
