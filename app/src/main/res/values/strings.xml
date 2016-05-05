@@ -9,6 +9,8 @@
     <string name="title_activity_symptoms">PreventionActivity</string>
     <string name="title_activity_transmission">PreventionActivity</string>
     <string name="title_activity_pregnant">PreventionActivity</string>
+    <string name="title_activity_quiz">Settings</string>
+    <string name="title_activity_results">Settings</string>
     <string name="title_activity_settings">Settings</string>
 
     <!-- Strings related to Settings -->

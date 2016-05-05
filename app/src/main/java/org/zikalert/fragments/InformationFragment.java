@@ -67,8 +67,5 @@ public class InformationFragment extends Fragment {
 
         mAdapter = new InformationAdapter(getActivity());
         mRecyclerView.setAdapter(mAdapter);
-
-
-
     }
 }

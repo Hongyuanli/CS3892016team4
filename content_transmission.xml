@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".informationactivities.TransmissionActivity"
+    tools:showIn="@layout/activity_transmission">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="- Zika virus is transmitted primarily by mosquitoes, like most flaviviruses. It has been pinpointed to originate from Aedes aegypti mosquitoes and experimental infections show that this species is capable of not only carrying but transmitting the Zika virus \n\n- Other Aedes mosquito species (notably Ae. africanus, Ae. albopictus, Ae. polynesiensis, Ae. unilineatus, Ae. vittatus and Ae. hensilli) are also noted as potential vectors for the Zika virus. These species bite most often during the day, so caution is advised during these hours \n\n- Additional modes of transmission have been identified: perinatal transmission can occur most probably by trans-placental transmission or during delivery if the mother is infected \n\n- There is also the potential risk of Zika virus transmission from blood transfusion \n\n- Zika virus can also be spread by a man to his partners during intercourse; a woman cannot transmit the virus to a man, however"
+                android:id="@+id/textView2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
