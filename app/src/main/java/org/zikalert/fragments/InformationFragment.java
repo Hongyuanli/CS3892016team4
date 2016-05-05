@@ -23,6 +23,7 @@ import org.zikalert.informationactivities.AreaActivity;
 import org.zikalert.informationactivities.PregnantActivity;
 import org.zikalert.informationactivities.PreventionActivity;
 import org.zikalert.R;
+import org.zikalert.informationactivities.QuizActivity;
 import org.zikalert.informationactivities.SymptomsActivity;
 import org.zikalert.informationactivities.TransmissionActivity;
 
@@ -67,5 +68,14 @@ public class InformationFragment extends Fragment {
 
         mAdapter = new InformationAdapter(getActivity());
         mRecyclerView.setAdapter(mAdapter);
+
+        Button quiz = (Button)getView().findViewById(R.id.btn_quiz);
+        quiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), QuizActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
