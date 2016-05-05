@@ -26,7 +26,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Zika virus is a flavivirus, closely related to dengue.Cases of Zika virus have previously been reported in Africa, southern Asia and the Pacific Islands. Since May 2015, Brazil has experienced a significant outbreak of Zika virus. In recent months, Brazilian officials reported an increase in the number of babies born with microcephaly. Researchers are working to study the link between Zika during pregnancy and microcephaly. Although there is increasing evidence of the link between Zika and microcephaly, we do not know if these babies’ microcephaly is a result of their mother’s Zika virus infection during pregnancy."
-                android:id="@+id/textView2"
+                android:id="@+id/textView1"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />

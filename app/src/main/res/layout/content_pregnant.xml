@@ -33,7 +33,7 @@
             \n\n\nZika and microcephaly
             \n\n  - Since May 2015, Brazil has experienced a significant outbreak of Zika virus. In recent months, Brazilian officials reported an increase in the number of babies born with microcephaly.
             \n\n  - Recent study results showing the presence of Zika virus in the brains of babies born with microcephaly."
-                android:id="@+id/textView2"
+                android:id="@+id/textView1"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true" />

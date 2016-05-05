@@ -4,8 +4,10 @@ package org.zikalert.fragments;
  * Created by Luiz Fernando on 3/18/2016.
  */
 
+import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.buzzilla.webhose.client.WebhoseClient;
@@ -32,11 +35,16 @@ import java.io.IOException;
  */
 public class NewsFragment extends Fragment {
 
+//    ProgressDialog progress;
+
     private final String webhoseToken = "fefad8c8-e6e8-43f8-986e-c8b26946feee";
 
     RecyclerView mRecyclerView;
     RecyclerView.LayoutManager mLayoutManager;
     NewsAdapter mAdapter;
+
+    private ProgressBar spinner;
+    private FloatingActionButton loading;
 
     public NewsFragment() { //Default blank constructor required.
     }
@@ -59,12 +67,22 @@ public class NewsFragment extends Fragment {
         mLayoutManager = new LinearLayoutManager(getView().getContext());
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-
         new GetNews().execute();
+
+        loading = (FloatingActionButton) getView().findViewById(R.id.btn_loading);
+        loading.setVisibility(View.VISIBLE);
+
+//        spinner = (ProgressBar) getView().findViewById(R.id.progressBar);
+//        spinner.setVisibility(View.VISIBLE);
+
+
+//        progress = ProgressDialog.show(getContext(), "dialog title",
+//                "dialog message", true);
 
     }
 
     class GetNews extends AsyncTask<Void,Void,WebhoseResponse>{
+
         @Override
         protected WebhoseResponse doInBackground(Void... params) {
             WebhoseResponse r = null;
@@ -90,10 +108,19 @@ public class NewsFragment extends Fragment {
         }
 
         @Override
+        protected void onProgressUpdate(Void... values) {
+        }
+
+        @Override
         protected void onPostExecute(WebhoseResponse webhoseResponse) {
+            // To dismiss the dialog
+            loading.setVisibility(View.INVISIBLE);
+            //spinner.setVisibility(View.INVISIBLE);
+//            progress.dismiss();
+
             if(webhoseResponse != null){
                 //TODO: see if this still works when reloaded
-                mAdapter = new NewsAdapter(webhoseResponse.posts,getActivity());
+                mAdapter = new NewsAdapter(webhoseResponse.posts,getActivity(),getContext());
                 mRecyclerView.setAdapter(mAdapter);
 
 //                WebhosePost p = webhoseResponse.posts.get(0);
