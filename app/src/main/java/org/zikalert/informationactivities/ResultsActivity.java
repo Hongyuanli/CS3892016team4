@@ -41,7 +41,7 @@ public class ResultsActivity extends AppCompatActivity {
         share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = new Intent(Intent.ACTION_SEND);
                 intent.setType("text/plain");
                 String share = "I downloaded the ZikAlert app and got " +score+"/6 at the quiz! Download it now on Play Store!";
                 intent.putExtra(Intent.EXTRA_TEXT,share);

@@ -53,6 +53,7 @@ public class ChecklistAdapter extends RecyclerView.Adapter<ChecklistAdapter.View
             public void onClick(View v) {
                 if (holder.editText.isEnabled()) {
                     holder.editText.setEnabled(false);
+                    item.setTitle(holder.editText.getText().toString());
                 } else {
                     holder.editText.setEnabled(true);
                 }
@@ -63,14 +64,6 @@ public class ChecklistAdapter extends RecyclerView.Adapter<ChecklistAdapter.View
             @Override
             public void onClick(View v) {
                 removeAt(position);
-            }
-        });
-
-        holder.editText.setOnKeyListener(new View.OnKeyListener() {
-            @Override
-            public boolean onKey(View v, int keyCode, KeyEvent event) {
-                item.setTitle(holder.editText.getText().toString());
-                return true;
             }
         });
     }

@@ -71,11 +71,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>{
         holder.newsShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent sendIntent = new Intent();
-                sendIntent.setAction(Intent.ACTION_SEND);
+                Intent sendIntent = new Intent(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT, webhosePost.title + ": "+ webhosePost.url);
                 sendIntent.setType("text/plain");
-                mActivity.startActivity(sendIntent);
+                mActivity.startActivity(Intent.createChooser(sendIntent, "Share"));
             }
         });
 

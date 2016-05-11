@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity{
         Notification.Builder builder = new Notification.Builder(this);
         builder.setContentTitle("ZikAlert");
         builder.setContentText(content);
-        builder.setSmallIcon(R.drawable.ic_notification);
+        builder.setSmallIcon(R.mipmap.ic_launcher);
         return builder.build();
     }
 
